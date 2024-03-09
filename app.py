@@ -14,6 +14,10 @@ def index():
 def fileshare():
     return render_template('fileshare.html')
 
+@app.route('/bomber')
+def bomber():
+    return render_template('sms-bomber.html')
+
 @app.route('/upload', methods=['POST'])
 def upload():
     file = request.files['file']
