@@ -1,4 +1,5 @@
 import random, json, os, threading, time
+from werkzeug.utils import secure_filename
 
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif','zip', 'py', 'html', 'json', 'exe', 'apk'}
 
@@ -15,7 +16,7 @@ def linkGenerator(fileName: str):
   
     jsonData = getDatabase()
     with open('database.json', 'w') as file:
-        jsonData[randomName] = fileName
+        jsonData[randomName] = secure_filename(fileName)
         data = json.dumps(jsonData, indent=2)
         file.write(data)
 
@@ -26,7 +27,8 @@ def linkGenerator(fileName: str):
 
 def removeFile(fileName):
     time.sleep(120)
-    os.remove('uploads/' + fileName)
+    localName = secure_filename('uploads/' + fileName)
+    os.remove(localName)
     jsonData = getDatabase()
     with open('database.json', 'w') as file:
         del jsonData[fileName[:5]]

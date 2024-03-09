@@ -2,11 +2,8 @@ from flask import Flask, request, jsonify, send_from_directory, make_response, r
 from main import *
 from werkzeug.utils import secure_filename
 
-
 app = Flask(__name__)
-
 app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024
-
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 
 @app.route('/')
@@ -16,7 +13,6 @@ def index():
 @app.route('/file-share')
 def fileshare():
     return render_template('fileshare.html')
-
 
 @app.route('/upload', methods=['POST'])
 def upload():
