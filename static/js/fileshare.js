@@ -1,7 +1,7 @@
 let progress = document.querySelector('.progress');
 let percent = document.querySelector('.percent');
-let siteUrl = "http://" + window.location.host
-let download_url = "http://" + window.location.host
+let siteUrl = "https://" + window.location.host
+let download_url = "https://" + window.location.host
 const downloadBtn = document.querySelector('#codeBtn');
 
 
@@ -108,7 +108,7 @@ codeBtn.addEventListener('click', (e) => {
   inputBoxes.forEach((input, index) => {
     code += input.value;
   });
-  download_url = 'http://' + window.location.host + '/dl/' + code;
+  download_url = 'https://' + window.location.host + '/dl/' + code;
   window.location.href = download_url;
 });
 
