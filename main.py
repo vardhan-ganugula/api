@@ -26,7 +26,7 @@ def linkGenerator(fileName: str):
     return encFile
 
 def removeFile(fileName):
-    time.sleep(120)
+    time.sleep(3600)
     localName = secure_filename('uploads/' + fileName)
     os.remove(localName)
     jsonData = getDatabase()
