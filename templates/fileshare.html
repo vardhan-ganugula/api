@@ -1,0 +1,80 @@
+{% extends 'template.html' %}
+{% block body %}
+
+
+<main>
+  <div class="share_section">
+    <div class="file_details">
+      <div class="info-box">
+        <div class="icon">
+          <img src="{{ url_for('static', filename='images/icon.jpg')}}" alt="">
+        </div>
+        <div class="content">
+          <h3>Upload or Download</h3>
+          <p>Max size <strong>100MB</strong> and allowed file are <strong> pdf, zip, images, python files and html files</strong>. Your files automatically deleted after <strong>1Hour</strong></p>
+        </div>
+      </div>
+      
+      <div class="fileDownload_area">
+        <form onSubmit="">
+          <div class="inputBoxes">
+            <input type="text" maxLength="1" />
+            <input type="text" maxLength="1" disabled />
+            <input type="text" maxLength="1" disabled />
+            <input type="text" maxLength="1" disabled />
+            <input type="text" maxLength="1" disabled />
+          </div>
+          <button type="submit" id='codeBtn' disabled>Download</button>
+        </form>
+      </div>
+
+      <!-- file response area  -->
+      <div class="responseArea">
+        <div class="responseUrl">
+          <span id="url"> https://google.com </span> <i class="fa-solid fa-clipboard" onclick="copyUrl()"></i> </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- file response area ends  -->
+
+    <div class="file_upload">
+      <form onSubmit="handleFormSubmit(event)" id='form-data'>
+
+        <div class="form-group upload_label">
+          <input type="file" name="file" id="file" hidden />
+          <label for="file">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>
+              Click here to upload file
+            </span>
+          </label>
+        </div>
+        <button type="submit">Upload</button>
+
+        <!-- filename box and details starts -->
+        <div class="fileNameBox" style="display: none;">
+          <div class="top">
+            <i class="fa-solid fa-file-lines"></i>
+            <div class="progressBar">
+              <div class="progress">
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <span class="fileName">
+            </span>
+            <span class="percent"> </span>
+          </div>
+        </div>
+        <!-- filename box and details ends -->
+
+      </form>
+    </div>
+  </div>
+</main>
+<script src="{{ url_for('static', filename='js/fileshare.js')}}"></script>
+<script>
+  setTitle('FileShare')
+</script>
+{% endblock %}

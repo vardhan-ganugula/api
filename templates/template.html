@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fileshare.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        function setTitle(title) {
+            document.title = 'vandron - ' + title;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                V
+            </div>
+            <div class="hamBurger" onclick="changeIcon()">
+                <i class="fa-solid fa-bars" id="iconChange"></i>
+            </div>
+            <ul class="navbar">
+                <a href='/' class="navlink">
+                    <li class="nav_item">Home</li>
+                </a>
+                <a href='/bomber' class="navlink">
+                    <li class="nav_item">Bomber</li>
+                </a>
+                <a href='/shortner' class="navlink">
+                    <li class="nav_item">Shortner</li>
+                </a>
+                <a href='/file-share' class="navlink">
+                    <li class="nav_item">FileShare</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    {% block body %}
+
+    {% endblock %}
+
+
+    <footer>
+        created by vardhan
+    </footer>
+    <script src="{{ url_for('static', filename='js/index.js')}}"></script>
+
+</body>
+
+</html>

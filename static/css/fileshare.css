@@ -1,0 +1,302 @@
+main {
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .share_section {
+    display: flex;
+    height: 100%;
+    width: calc(100% - 30px);
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+
+.share_section .file_details,
+.file_upload {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+    box-shadow: 0 0 100px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .1);
+    gap: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.file_upload .upload_label label {
+    display: flex;
+    border: 2px dashed #00d0ff;
+    height: 18rem;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #F0F8FF;
+    margin: 2rem 5rem 3rem 5rem;
+    box-shadow: 0 0 50px 0 #00d0ff13;
+}
+
+.file_upload .upload_label label i {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    color: #00d0ff;
+
+}
+
+.share_section .file_details form,
+.file_upload form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form button {
+    margin-top: -15px;
+    padding: .7rem 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #00d0ff;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: .2rem;
+    font-weight: bold;
+}
+
+
+
+.share_section .file_details .inputBoxes {
+    padding: 3rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.share_section .file_details .inputBoxes input {
+    width: 2rem;
+    height: 3rem;
+    text-align: center;
+    border: 2px solid rgb(232 255 174);
+    border-radius: .3rem;
+    font-size: 1.5rem;
+}
+
+.share_section .file_details .inputBoxes input:focus {
+    border: 2px solid rgb(170, 255, 0);
+    outline: rgb(170, 255, 0);
+}
+
+.fileDownload_area button {
+    background-color: rgb(232 255 174);
+}
+
+.fileDownload_area button.btn_active {
+    background-color: rgb(170, 255, 0);
+}
+
+.responseArea {
+    display: none;
+    width: 90%;
+    padding: 0 15px;
+}
+
+.responseArea .responseUrl {
+    border-bottom: 1px solid #00d0ff;
+    padding: 1rem;
+    position: relative;
+    font-size: 15px;
+    background-color: #e9f0ff;
+}
+
+
+.responseArea .responseUrl i {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #0091ff;
+    cursor: pointer;
+}
+
+.fileNameBox {
+    /* display: none; */
+    margin-top: 20px;
+    width: 350px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #e9f0ff;
+}
+
+.fileNameBox .top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.fileNameBox .top i {
+    font-size: 20px;
+    color: #00d0ff;
+    width: 25px;
+}
+
+.fileNameBox .top .progressBar {
+    background-color: #fff;
+    width: calc(100% - 25px);
+    height: 4px;
+}
+
+.fileNameBox .top .progressBar .progress {
+    height: 100%;
+    width: 5px;
+    background-color: #00d0ff;
+    transition: all 0.5s ease;
+
+}
+
+.fileNameBox .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    gap: 10px;
+    padding: 10px 4px 0 0;
+}
+
+.fileNameBox .bottom .fileName {
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.fileNameBox .bottom .percent {
+    width: 54px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.file_details .info-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.file_details .info-box .icon {
+    width: 20rem;
+}
+
+.file_details .info-box .icon img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.file_details .info-box .content {
+    width: 30rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.file_details .info-box .content h3 {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 980px) {
+    .share_section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .share_section .file_details,
+    .file_upload {
+        width: 100%;
+        padding: 50px 30px;
+    }
+
+    main .share_section {
+        padding: 15px;
+    }
+
+
+    .share_section li {
+        font-size: .8rem;
+    }
+
+    .share_section button {
+        font-size: .7rem;
+    }
+
+    .share_section .file_upload label {
+        width: 18rem;
+    }
+
+    .fileNameBox {
+        width: 250px;
+        height: 80px;
+        font-size: 18px;
+    }
+
+    .responseUrl {
+        width: 100%;
+        white-space: nowrap;
+        overflow: clip;
+        text-overflow: ellipsis;
+        font-size: 11px;
+    }
+
+    .responseUrl i {
+        right: 8px !important;
+    }
+
+    .responseUrl span:nth-child(1) {
+        font-size: 11px;
+    }
+
+    form button {
+        margin-top: -30px;
+        margin-bottom: 10px;
+    }
+
+    .file_details .info-box .content {
+        width: 100%;
+    }
+
+    .file_details .info-box .content {
+        padding: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .share_section .file_upload label {
+        width: 13rem;
+        height: 12rem;
+    }
+
+    .share_section .file_upload label i {
+        font-size: 3rem;
+    }
+
+    .share_section .file_upload label span {
+        font-size: .8rem;
+    }
+}
