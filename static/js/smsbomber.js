@@ -29,7 +29,7 @@ document.querySelector('.incrementar').addEventListener('click', (e) =>{
 });
 
 setInterval(()=>{
-    console.log('hi')
+
     if(icon.classList.contains('fa-comment-sms')){
         icon.classList.remove('fa-comment-sms');
         icon.classList.add('fa-bomb');

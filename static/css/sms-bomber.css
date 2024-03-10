@@ -158,3 +158,21 @@
         transform: rotate(0);
     }
 }
+@media (max-width: 980px) {
+    .warning{
+        width: 350px;
+        padding: 35px;
+    }
+    .warning .text{
+        padding: 10px !important;
+        font-size: 14px;
+    }
+    .warning .close_icon{
+        height: 35px;
+        width: 35px;
+        font-size: 15px;
+    }
+    .warning .warning_icon{
+        font-size: 30px;
+    }
+}
