@@ -37,4 +37,4 @@ setInterval(()=>{
         icon.classList.remove('fa-bomb');
         icon.classList.add('fa-comment-sms');
     }
-}, 2000);
+}, 2500);
