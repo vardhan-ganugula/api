@@ -20,7 +20,7 @@ nav {
     left: 0;
     top: 0;
     position: relative;
-    z-index: 999;
+    z-index: 9999;
 }
 
 nav .logo {

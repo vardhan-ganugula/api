@@ -15,8 +15,9 @@
             <i class="fa-solid fa-triangle-exclamation"></i>
         </div>
         <p>
-            This tool is for fun purpose only. Try it as your own risk. Try if you have permission. We are not responsible
-        for your actions.
+            This tool is for fun purpose only. Try it as your own risk. Try if you have permission. We are not
+            responsible
+            for your actions.
         </p>
     </div>
 </div>
@@ -28,34 +29,38 @@
         </div>
 
         <h3>SMS Bomber</h3>
-
-        <div class="phone_number">
-            <div class="country_code">
-                +91
+        <form action="https://smsbomber-vandron.onrender.com/" method="post">
+            <div class="phone_number">
+                <div class="country_code">
+                    +91
+                </div>
+                <div class="input">
+                    <input type="text" name="number" maxlength="10" id="phone_number" placeholder="phone number">
+                </div>
+                <div class="send_icon">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
             </div>
-            <div class="input">
-                <input type="text" maxlength="10" id="phone_number" placeholder="phone number">
+            <div class="count_area">
+                <div class="decrementar">
+                    <i class="fa-regular fa-square-minus"></i>
+                </div>
+                <div class="input">
+                    <input type="text" name="times" placeholder="count" value="5" id="count">
+                </div>
+                <div class="incrementar">
+                    <i class="fa-regular fa-square-plus"></i>
+                </div>
             </div>
-            <div class="send_icon">
-                <i class="fa-solid fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="count_area">
-            <div class="decrementar">
-                <i class="fa-regular fa-square-minus"></i>
-            </div>
-            <div class="input">
-                <input type="text" placeholder="count" value="5" id="count">
-            </div>
-            <div class="incrementar">
-                <i class="fa-regular fa-square-plus"></i>
-            </div>
-        </div>
-        <button onclick="startBomb()" class="bomb">BOMB</button>
+            <button type="submit" class="bomb">BOMB</button>
+        </form>
     </div>
 
 
 </div>
 
+<script>
+
+</script>
 <script src="{{ url_for('static', filename='js/smsbomber.js')}}"></script>
 {% endblock %}
