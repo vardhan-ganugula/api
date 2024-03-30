@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block head %}{% endblock %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.ico')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -12,7 +13,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         function setTitle(title) {
-            document.title = 'vandron - ' + title;
+            document.title = 'CodeRealm - ' + title;
         }
     </script>
 </head>
@@ -49,7 +50,7 @@
 
 
     <footer>
-        created by vardhan
+        created by CodeRealm
     </footer>
     <script src="{{ url_for('static', filename='js/index.js')}}"></script>
 

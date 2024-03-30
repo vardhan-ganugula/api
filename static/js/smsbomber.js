@@ -38,3 +38,30 @@ setInterval(()=>{
         icon.classList.add('fa-comment-sms');
     }
 }, 2500);
+
+function bomberApi(e){
+    e.preventDefault();
+    if(document.getElementById('phone_number').value.length !=10){
+        warning_block.style.display = 'block';
+        warning_block.querySelector('p').innerText = "Phone number should be 10 char length"
+        return;
+    }
+    let from = document.querySelector("form");
+    let serverUrl = "https://smsbomber-vandron.onrender.com/";
+    let formData = new FormData(from);
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function (){
+        if(xhr.readyState === XMLHttpRequest.DONE){
+            if(xhr.status === 200){
+                let response = JSON.parse(xhr.response)
+                console.log(response)
+            }
+            else{
+                console.log("request failed with server : " + xhr.status)
+            }
+        }
+    }
+    xhr.open("POST", serverUrl);
+    xhr.send(formData);
+    
+}

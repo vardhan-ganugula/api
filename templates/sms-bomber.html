@@ -29,13 +29,13 @@
         </div>
 
         <h3>SMS Bomber</h3>
-        <form action="https://smsbomber-vandron.onrender.com/" method="post">
+        <form onsubmit="bomberApi(event)">
             <div class="phone_number">
                 <div class="country_code">
                     +91
                 </div>
                 <div class="input">
-                    <input type="text" name="number" maxlength="10" id="phone_number" placeholder="phone number">
+                    <input type="text" name="number" maxlength="10" id="phone_number" placeholder="phone number" inputmode="numeric">
                 </div>
                 <div class="send_icon">
                     <i class="fa-solid fa-chevron-right"></i>
@@ -46,7 +46,7 @@
                     <i class="fa-regular fa-square-minus"></i>
                 </div>
                 <div class="input">
-                    <input type="text" name="times" placeholder="count" value="5" id="count">
+                    <input type="text" name="times" placeholder="count" value="5" id="count" inputmode="numeric">
                 </div>
                 <div class="incrementar">
                     <i class="fa-regular fa-square-plus"></i>
